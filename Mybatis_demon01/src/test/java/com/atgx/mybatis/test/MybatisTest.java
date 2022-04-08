@@ -1,6 +1,7 @@
 package com.atgx.mybatis.test;
 
 import com.atgx.mybatis.mapper.UserMapper;
+import com.atgx.mybatis.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -9,6 +10,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 public class MybatisTest {
 
@@ -30,5 +32,19 @@ public class MybatisTest {
         sqlSession.commit();
         System.out.println("插入的条数"+i);
 
+    }
+
+    @Test
+    public void testCRUD() throws IOException {
+        InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User user = mapper.getUserById();
+        System.out.println(user.toString());
+        System.out.println("===============");
+
+        List<User> list = mapper.getAllUser();
+        list.forEach(x-> System.out.println(x));
     }
 }
