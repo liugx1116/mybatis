@@ -21,4 +21,8 @@ public interface UserMapper {
      * 查询全部用户
      */
     List<User> getAllUser();
+    /**
+     * 删除
+     */
+    int deleteUserById();
 }

@@ -40,11 +40,13 @@ public class MybatisTest {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User user = mapper.getUserById();
-        System.out.println(user.toString());
-        System.out.println("===============");
-
+//        User user = mapper.getUserById();
+//        System.out.println(user.toString());
+//        System.out.println("===============");
+//
         List<User> list = mapper.getAllUser();
         list.forEach(x-> System.out.println(x));
+//        int i = mapper.deleteUserById();
+//        System.out.println("删除的行数"+i);
     }
 }
