@@ -1,15 +1,23 @@
-# Project exclude paths
-/Mybatis_demon01/target/
-/Mybatis_demon02/target/classes/log4j.xml
-/Mybatis_demon02/target/classes/jdbc.properties
-/Mybatis_demon02/target/classes/com/atgx/mybatis/mapper/MyUserMapper.class
-/Mybatis_demon02/target/classes/com/atgx/mybatis/mapper/MyUserMapper.xml
-/Mybatis_demon02/target/classes/com/atgx/mybatis/mapper/SqlMapper.class
-/Mybatis_demon02/target/classes/com/atgx/mybatis/mapper/SqlMapper.xml
-/Mybatis_demon02/target/test-classes/com/atgx/mybatis/test/SqlMapperTest.class
-/Mybatis_demon02/target/classes/com/atgx/mybatis/utils/SqlSessionUtils.class
-/Mybatis_demon02/target/test-classes/com/atgx/mybatis/test/TestMybatis.class
-/Mybatis_demon02/target/test-classes/com/atgx/mybatis/test/TestMyUser.class
-/Mybatis_demon02/target/classes/com/atgx/mybatis/pojo/User.class
-/Mybatis_demon02/target/classes/com/atgx/mybatis/mapper/UserMapper.class
-/Mybatis_demon02/target/classes/com/atgx/mybatis/mapper/UserMapper.xml
+
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
