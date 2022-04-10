@@ -45,7 +45,7 @@ public class MybatisTest {
 //        System.out.println("===============");
 //
         List<User> list = mapper.getAllUser();
-        list.forEach(x-> System.out.println(x));
+//        list.forEach(x-> System.out.println(x));
 //        int i = mapper.deleteUserById();
 //        System.out.println("删除的行数"+i);
     }
